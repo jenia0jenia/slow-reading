@@ -1,0 +1,62 @@
+:root {
+    --color-selection: #ffe732;
+    --color-main: blueviolet;
+}
+
+::selection {
+    background: var(--color-selection);
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.text {
+    text-align: justify;
+}
+
+.text span {
+    opacity: 0;
+    font-size: 0;
+    transition: opacity .5s ease;
+}
+
+.text span.is-visible {
+    opacity: 1;
+    font-size: 16px;
+}
+
+.play {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    bottom: 20px;
+    border: 0;
+    background-color: var(--color-main);
+    border-radius: 6px;
+    opacity: .6;
+    transition: opacity .2s ease;
+}
+
+.play:active {
+    transform: scale(.9);
+}
+
+.play:focus {
+    outline: 0;
+}
+
+.play:hover {
+    opacity: 1;
+}
